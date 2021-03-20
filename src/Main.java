@@ -17,15 +17,15 @@ public class Main {
 		int books = Integer.parseInt(line);
 		int[] prices = new int[books];
 		int cost;
-		String[] numberArrays = null;
+		String[] numArrays = null;
 		int countain = 0;
 		while(line != null) {
 			if(countain == 0) {
 				line = read.readLine();
 			}
-			numberArrays = line.split(SPLIT);
+			numArrays = line.split(SPLIT);
 			for(int i =0; i<books;i++) {
-				prices[i] = Integer.parseInt(numberArrays[i]);
+				prices[i] = Integer.parseInt(numArrays[i]);
 				System.out.println(prices[i]);
 
 			}
@@ -61,18 +61,18 @@ public class Main {
 		return amateur;
 		
 	}
-	public static int[] differenceFind(int []value, int netcash ) {
-		int diference = 0;
-		int temporal = Integer.MAX_VALUE;
+	public static int[] differenceFind(int []worth, int netcash ) {
+		int dif = 0;
+		int temp = Integer.MAX_VALUE;
 		int[]positions = new int[2];
-		for(int i=0;i<value.length;i++) {
-			if(binarySerch(value,(netcash-value[i]))>=0) {
-				if(value[i]-value[binarySerch(value,(netcash-value[i]))]<Integer.MAX_VALUE) {
-					diference = Math.abs(value[i]-value[binarySerch(value,(netcash-value[i]))]);
-					if((temporal)>(diference)) {
-						temporal = diference;
-						positions[0] = value[i];
-						positions[1]= value[binarySerch(value,(netcash-value[i]))];
+		for(int i=0;i<worth.length;i++) {
+			if(binarySerch(worth,(netcash-worth[i]))>=0) {
+				if(worth[i]-worth[binarySerch(worth,(netcash-worth[i]))]<Integer.MAX_VALUE) {
+					dif = Math.abs(worth[i]-worth[binarySerch(worth,(netcash-worth[i]))]);
+					if((temp)>(dif)) {
+						temp = dif;
+						positions[0] = worth[i];
+						positions[1]= worth[binarySerch(worth,(netcash-worth[i]))];
 					}
 				}
 			}
